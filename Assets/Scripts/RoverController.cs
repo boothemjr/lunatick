@@ -13,11 +13,11 @@ public class RoverController : MonoBehaviour
     public JointMotor2D motorMid;
     public JointMotor2D motorRear;
 
-    public float speedForward;
-    public float speedBackward;
+    public float speedForward = 7500;
+    public float speedBackward = -5;
     
-    public float torqueForward;
-    public float torqueBackward;
+    public float torqueForward = 1;
+    public float torqueBackward = -1;
     
     // Start is called before the first frame update
     void Start()

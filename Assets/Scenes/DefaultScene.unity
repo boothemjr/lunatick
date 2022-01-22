@@ -213,10 +213,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 387338681601406814, guid: 8577270169da88241b5da1b85602148a, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: ec37e04b2776a084090ca5c5b5acb48f, type: 2}
     - target: {fileID: 2349670051007322508, guid: 8577270169da88241b5da1b85602148a, type: 3}
       propertyPath: m_UseMotor
       value: 1
@@ -225,14 +221,6 @@ PrefabInstance:
       propertyPath: m_Motor.m_MotorSpeed
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2651841885913788021, guid: 8577270169da88241b5da1b85602148a, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: ec37e04b2776a084090ca5c5b5acb48f, type: 2}
-    - target: {fileID: 2855051597754983776, guid: 8577270169da88241b5da1b85602148a, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: ec37e04b2776a084090ca5c5b5acb48f, type: 2}
     - target: {fileID: 2858688309858843368, guid: 8577270169da88241b5da1b85602148a, type: 3}
       propertyPath: m_UseMotor
       value: 1
@@ -252,6 +240,18 @@ PrefabInstance:
     - target: {fileID: 3955902681861897900, guid: 8577270169da88241b5da1b85602148a, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955902681861897900, guid: 8577270169da88241b5da1b85602148a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955902681861897900, guid: 8577270169da88241b5da1b85602148a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955902681861897900, guid: 8577270169da88241b5da1b85602148a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3955902681861897900, guid: 8577270169da88241b5da1b85602148a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -420,7 +420,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045533495}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -542,7 +542,7 @@ MonoBehaviour:
   wheelFront: {fileID: 2045533500}
   wheelMid: {fileID: 2045533499}
   wheelRear: {fileID: 2045533498}
-  speedForward: 50
-  speedBackward: -50
-  torqueForward: 10
-  torqueBackward: -10
+  speedForward: 7500
+  speedBackward: -5
+  torqueForward: 1
+  torqueBackward: -1
