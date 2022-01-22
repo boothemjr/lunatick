@@ -8,6 +8,9 @@ public class RoverController : MonoBehaviour
     public Rigidbody2D rigidBody; 
     public float thrustVal = 7000f;
 
+    [SerializeField] PhaseManager phaseManager;
+    [SerializeField] float phaseSpeedUpRate;
+
     public WheelJoint2D wheelFront;
     public WheelJoint2D wheelMid;
     public WheelJoint2D wheelRear;
@@ -24,8 +27,8 @@ public class RoverController : MonoBehaviour
 
     void Update()
     {
-        
-        // move forwards
+        if (Input.GetAxisRaw("Fire1") > 0) {PhaseAbility();}
+
         if (Input.GetAxisRaw("Vertical") > 0) // using inputManager for vehicle control - might change later
         {
             // front tire control
@@ -79,5 +82,9 @@ public class RoverController : MonoBehaviour
             wheelRear.useMotor = false;
             
         }
+    }
+    private void PhaseAbility()
+    {
+        phaseManager.cycleDay += phaseSpeedUpRate;
     }
 }
