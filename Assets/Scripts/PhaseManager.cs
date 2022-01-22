@@ -24,8 +24,6 @@ public class PhaseManager : MonoBehaviour
     {
         CycleDays();
         DetermineLightOrDark();
-        Debug.Log(cycleDay);
-        Debug.Log(light);
     }
 
     private void CycleDays()

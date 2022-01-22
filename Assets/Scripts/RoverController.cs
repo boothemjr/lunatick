@@ -84,6 +84,6 @@ public class RoverController : MonoBehaviour
     }
     private void PhaseAbility()
     {
-         {phaseManager.cycleDay += phaseSpeedUpRate;}
+        phaseManager.cycleDay += phaseSpeedUpRate;
     }
 }
