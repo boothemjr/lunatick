@@ -309,6 +309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rover
       objectReference: {fileID: 0}
+    - target: {fileID: 8831369056443843195, guid: 8577270169da88241b5da1b85602148a, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8577270169da88241b5da1b85602148a, type: 3}
 --- !u!1 &1989070907
