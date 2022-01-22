@@ -213,6 +213,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 387338681601406814, guid: 8577270169da88241b5da1b85602148a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: ec37e04b2776a084090ca5c5b5acb48f, type: 2}
+    - target: {fileID: 2349670051007322508, guid: 8577270169da88241b5da1b85602148a, type: 3}
+      propertyPath: m_UseMotor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2349670051007322508, guid: 8577270169da88241b5da1b85602148a, type: 3}
+      propertyPath: m_Motor.m_MotorSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2651841885913788021, guid: 8577270169da88241b5da1b85602148a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: ec37e04b2776a084090ca5c5b5acb48f, type: 2}
+    - target: {fileID: 2855051597754983776, guid: 8577270169da88241b5da1b85602148a, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: ec37e04b2776a084090ca5c5b5acb48f, type: 2}
+    - target: {fileID: 2858688309858843368, guid: 8577270169da88241b5da1b85602148a, type: 3}
+      propertyPath: m_UseMotor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858688309858843368, guid: 8577270169da88241b5da1b85602148a, type: 3}
+      propertyPath: m_Motor.m_MotorSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408581967501001135, guid: 8577270169da88241b5da1b85602148a, type: 3}
+      propertyPath: m_UseMotor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408581967501001135, guid: 8577270169da88241b5da1b85602148a, type: 3}
+      propertyPath: m_Motor.m_MotorSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3955902681861897900, guid: 8577270169da88241b5da1b85602148a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -355,7 +391,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1989070907}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e04b6834a0bb8334cb7e42220e962e20, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -476,3 +512,37 @@ PolygonCollider2D:
       - {x: -0.75, y: -1.9499999}
       - {x: -0.76, y: -1.87}
       - {x: -0.76, y: -1.63}
+--- !u!235 &2045533498 stripped
+WheelJoint2D:
+  m_CorrespondingSourceObject: {fileID: 2349670051007322508, guid: 8577270169da88241b5da1b85602148a, type: 3}
+  m_PrefabInstance: {fileID: 645718065}
+  m_PrefabAsset: {fileID: 0}
+--- !u!235 &2045533499 stripped
+WheelJoint2D:
+  m_CorrespondingSourceObject: {fileID: 2858688309858843368, guid: 8577270169da88241b5da1b85602148a, type: 3}
+  m_PrefabInstance: {fileID: 645718065}
+  m_PrefabAsset: {fileID: 0}
+--- !u!235 &2045533500 stripped
+WheelJoint2D:
+  m_CorrespondingSourceObject: {fileID: 3408581967501001135, guid: 8577270169da88241b5da1b85602148a, type: 3}
+  m_PrefabInstance: {fileID: 645718065}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2045533503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045533495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d436091b01efd514288ae9589f849da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheelFront: {fileID: 2045533500}
+  wheelMid: {fileID: 2045533499}
+  wheelRear: {fileID: 2045533498}
+  speedForward: 50
+  speedBackward: -50
+  torqueForward: 10
+  torqueBackward: -10
