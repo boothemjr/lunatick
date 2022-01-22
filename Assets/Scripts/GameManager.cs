@@ -28,7 +28,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.R))
+        {
+            RoverManager.instance.Reset(); // use reset method of rovermanager instance
+        }
     }
 
     private void AdvanceLevel()
