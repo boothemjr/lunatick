@@ -5,6 +5,9 @@ using UnityEngine;
 public class RoverController : MonoBehaviour
 {
 
+    [SerializeField] PhaseManager phaseManager;
+    [SerializeField] float phaseSpeedUpRate;
+
     public WheelJoint2D wheelFront;
     public WheelJoint2D wheelMid;
     public WheelJoint2D wheelRear;
@@ -28,6 +31,8 @@ public class RoverController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetAxisRaw("Fire1") > 0) {PhaseAbility();}
+
         if (Input.GetAxisRaw("Vertical") > 0) // using inputManager for vehicle control - might change later
         {
             motorFront.motorSpeed = speedForward * -1;
@@ -66,5 +71,9 @@ public class RoverController : MonoBehaviour
             wheelRear.useMotor = false;
             
         }
+    }
+    private void PhaseAbility()
+    {
+         {phaseManager.cycleDay += phaseSpeedUpRate;}
     }
 }
