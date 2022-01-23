@@ -11,7 +11,7 @@ public class RoverController : MonoBehaviour
 
 
     [SerializeField] PhaseManager phaseManager;
-    [SerializeField] float phaseSpeedUpRate;
+    [SerializeField] float phaseSpeedUpRate = 1.5f;
 
     public WheelJoint2D wheelFront;
     public WheelJoint2D wheelMid;
@@ -34,7 +34,7 @@ public class RoverController : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetAxisRaw("Fire1") > 0) {PhaseAbility();} // activate phase ability
+        if (Input.GetAxisRaw("Fire1") > 0) {UsePhaseAbility(phaseSpeedUpRate * Time.deltaTime);}
 
         CheckForGroundMovement();
         CheckForBoost();
@@ -130,6 +130,10 @@ public class RoverController : MonoBehaviour
             boostAmount -= (boostBurnRate * Time.deltaTime);
 
         }
+    }
+    private void UsePhaseAbility(float rate)
+    {
+        phaseManager.cycleDay += rate;
     }
 
 }
