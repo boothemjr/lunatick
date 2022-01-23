@@ -43,7 +43,6 @@ public class RoverController : MonoBehaviour
         {
             boostAmount += (boostGainRate * Time.deltaTime);
         }
-        Debug.Log("boostAmount = " + boostAmount);
 
     }
     private void PhaseAbility()
@@ -128,7 +127,6 @@ public class RoverController : MonoBehaviour
             // move left
             rigidBody.AddForce(Vector2.left * horiThrustVal * Time.deltaTime);
             boostAmount -= (boostBurnRate * Time.deltaTime);
-
         }
     }
     private void UsePhaseAbility(float rate)

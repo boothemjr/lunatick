@@ -16,7 +16,6 @@ public class KillzoneCollisionHandler : MonoBehaviour
 
     private void Update() 
     {
-        Debug.Log(inContactWithPlayer);
         if (inContactWithPlayer && isPureKillZone) {DestroyPlayer();}
         else if (inContactWithPlayer && isLight != phaseManager.light) {DestroyPlayer();}
     }

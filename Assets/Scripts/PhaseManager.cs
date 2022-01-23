@@ -30,7 +30,7 @@ public class PhaseManager : MonoBehaviour
     // cycles through the 28 days of the lunar calendar, cycleSpeed of 1 -> 1 day per second
     private void CycleDays()
     {
-        if(cycleDay < 28) {cycleDay += Time.deltaTime * cycleSpeed;}
+        if(cycleDay < cycle) {cycleDay += Time.deltaTime * cycleSpeed;}
         else{cycleDay = 0;}
     }
 
@@ -40,4 +40,5 @@ public class PhaseManager : MonoBehaviour
         if (cycleDay < 7 || cycleDay > 21) {light = false;}
         else {light = true;} 
     }
+
 }
