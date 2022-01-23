@@ -79,21 +79,15 @@ public class RoverManager : MonoBehaviour
         rearWheelRB.velocity = Vector2.zero;
         rearWheelRB.angularVelocity = 0f;
         
-        roverBody.transform.position = respawn.transform.position; // move rover to respawn position
-    }
-    
-    /*public bool IsGrounded()
-    {
-        bool grounded = frontWheelScript.isTouchingGround();
+        var newPos = respawn.transform.position;
         
-        if (grounded)
-        {
-            return true;
-        }
+        roverBody.transform.position = newPos; // move rover to respawn position
+        newPos += new Vector3(0f, 0f, 1);
+        frontWheelRB.transform.position = newPos;
+        midWheelRB.transform.position = newPos;
+        rearWheelRB.transform.position = newPos;
 
-        return false;
-
-    }*/
+    }
 
     public void SetGrounded(bool val)
     {
