@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8367383873280197604}
   - component: {fileID: 4165118939108698126}
   - component: {fileID: 7033274897512364914}
+  - component: {fileID: 317083468464072712}
   m_Layer: 0
   m_Name: back wheel
   m_TagString: Untagged
@@ -121,6 +122,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &317083468464072712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830365813542489677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 193452eefa9c2b04cb8746383df5e541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTouchingGround: 0
 --- !u!1 &2331047734097053321
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdc1f2f2cbc63d548a003c7485a3dc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grounded: 0
 --- !u!1 &2773166644939155327
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +195,7 @@ GameObject:
   - component: {fileID: 1434101312593907735}
   - component: {fileID: 4224213669018280731}
   - component: {fileID: 3526886923105248717}
+  - component: {fileID: 4286303009455227190}
   m_Layer: 0
   m_Name: front wheel
   m_TagString: Untagged
@@ -289,6 +305,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4286303009455227190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2773166644939155327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 193452eefa9c2b04cb8746383df5e541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTouchingGround: 0
 --- !u!1 &3606184513943340891
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +330,7 @@ GameObject:
   - component: {fileID: 8676803685764319730}
   - component: {fileID: 1756509153752871205}
   - component: {fileID: 3245563630391604424}
+  - component: {fileID: 3390075874762072338}
   m_Layer: 0
   m_Name: mid wheel
   m_TagString: Untagged
@@ -410,6 +440,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3390075874762072338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606184513943340891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 193452eefa9c2b04cb8746383df5e541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTouchingGround: 0
 --- !u!1 &4772930823751945274
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +746,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 7462208274323047424}
-  thrustVal: 7000
+  vertThrustVal: 7000
+  horiThrustVal: 3500
   phaseManager: {fileID: 0}
   phaseSpeedUpRate: 0
   wheelFront: {fileID: 3624819920195602388}
