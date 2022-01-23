@@ -749,7 +749,7 @@ MonoBehaviour:
   vertThrustVal: 7000
   horiThrustVal: 3500
   phaseManager: {fileID: 0}
-  phaseSpeedUpRate: 0
+  phaseSpeedUpRate: 8
   wheelFront: {fileID: 3624819920195602388}
   wheelMid: {fileID: 4227855723587271827}
   wheelRear: {fileID: 4439407699253108727}
