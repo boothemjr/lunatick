@@ -26,7 +26,7 @@ public class MoonHandler : MonoBehaviour
     // places moon along orbit based on the angle of orbit
     private void PlaceAlongOrbit(float angle)
     {
-        Vector3 moonPos = new Vector3(circle.transform.position.x + circle.radius * Mathf.Cos(angle), circle.transform.position.y + circle.radius * Mathf.Sin(angle), 0f);
+        Vector3 moonPos = new Vector3(circle.transform.position.x + circle.radius * Mathf.Cos(angle), circle.transform.position.y + circle.radius * Mathf.Sin(angle), 1f);
         float moonRadius = moon.GetComponent<SpriteRenderer>().bounds.size.x / 4;
 
         Vector3 shadowPos = new Vector3(circle.transform.position.x + circle.radius * Mathf.Cos(angle) - moonRadius, circle.transform.position.y + circle.radius * Mathf.Sin(angle), 0f);

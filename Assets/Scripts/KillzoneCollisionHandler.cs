@@ -16,9 +16,9 @@ public class KillzoneCollisionHandler : MonoBehaviour
 
     private void Update() 
     {
+        Debug.Log(inContactWithPlayer);
         if (inContactWithPlayer && isPureKillZone) {DestroyPlayer();}
         else if (inContactWithPlayer && isLight != phaseManager.light) {DestroyPlayer();}
-
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -38,7 +38,6 @@ public class KillzoneCollisionHandler : MonoBehaviour
 
     void ReloadLevel()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex);
+        RoverManager.instance.Reset();
     }
 }

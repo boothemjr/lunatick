@@ -1198,6 +1198,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2432902090676163719, guid: 6ed7e21476866974b950d12ce38c62ba, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1364
+      objectReference: {fileID: 0}
     - target: {fileID: 2432902091369142440, guid: 6ed7e21476866974b950d12ce38c62ba, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1294,7 +1298,8 @@ PrefabInstance:
       propertyPath: phaseManager
       value: 
       objectReference: {fileID: 1594061976}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1664794705, guid: 6ed7e21476866974b950d12ce38c62ba, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6ed7e21476866974b950d12ce38c62ba, type: 3}
 --- !u!1001 &2563316731887657575
 PrefabInstance:
