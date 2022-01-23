@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void AdvanceLevel()
+    public void AdvanceLevel()
     {
         if (currentLevel >= MAX_LEVEL) // if the level is equal to or greater than the max level, send message and exit
         {
