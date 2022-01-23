@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3244342699644405164, guid: cb1bc21bc47651545b58a535ec4120aa, type: 3}
+      propertyPath: phaseManager
+      value: 
+      objectReference: {fileID: 1594061976}
     - target: {fileID: 6382111025011902755, guid: cb1bc21bc47651545b58a535ec4120aa, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -391,6 +395,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4299260150878731472, guid: 6f323f49bf4500d46a0d34bb16cf5408, type: 3}
+      propertyPath: phaseManager
+      value: 
+      objectReference: {fileID: 1594061976}
     - target: {fileID: 6656401320262706726, guid: 6f323f49bf4500d46a0d34bb16cf5408, type: 3}
       propertyPath: m_Name
       value: Moving Dark Platform
@@ -727,6 +735,10 @@ PrefabInstance:
       propertyPath: movementVector.y
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4052718264115019216, guid: 822b8f7f414d52c4ebf6777192f6db7c, type: 3}
+      propertyPath: phaseManager
+      value: 
+      objectReference: {fileID: 1594061976}
     - target: {fileID: 5416337879028765127, guid: 822b8f7f414d52c4ebf6777192f6db7c, type: 3}
       propertyPath: m_Name
       value: Moving Light Platform
@@ -788,6 +800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dark Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 5350210179711508851, guid: e56109836c1769248a30b55e197d0d87, type: 3}
+      propertyPath: phaseManager
+      value: 
+      objectReference: {fileID: 1594061976}
     - target: {fileID: 6886424446290792404, guid: e56109836c1769248a30b55e197d0d87, type: 3}
       propertyPath: m_RootOrder
       value: 4
