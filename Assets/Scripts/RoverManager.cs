@@ -50,7 +50,7 @@ public class RoverManager : MonoBehaviour
         midWheelScript = midWheel.GetComponent<WheelScript>();
         rearWheelScript = rearWheel.GetComponent<WheelScript>();
         
-        respawn = GameObject.FindGameObjectWithTag("Respawn"); // store respawn position
+        RefreshRespawn();
         
         //store rigid bodies
         roverRB = roverBody.GetComponent<Rigidbody2D>();
@@ -59,6 +59,8 @@ public class RoverManager : MonoBehaviour
         rearWheelRB = rearWheel.GetComponent<Rigidbody2D>();
 
         grounded = true;
+        
+        Reset();
 
     }
 
@@ -70,6 +72,7 @@ public class RoverManager : MonoBehaviour
 
     public void Reset()
     {
+        
         //set all rigid bodies to zero
         roverRB.velocity = Vector2.zero;
         frontWheelRB.velocity = Vector2.zero;
@@ -87,6 +90,11 @@ public class RoverManager : MonoBehaviour
         midWheelRB.transform.position = newPos;
         rearWheelRB.transform.position = newPos;
 
+    }
+
+    public void RefreshRespawn()
+    {
+        respawn = GameObject.FindGameObjectWithTag("Respawn");
     }
 
     public void SetGrounded(bool val)
