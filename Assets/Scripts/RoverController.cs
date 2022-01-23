@@ -27,6 +27,11 @@ public class RoverController : MonoBehaviour
     public float torqueForward = 1;
     public float torqueBackward = -1;
 
+    public float boostMax = 100f;
+    public float boostAmount = 100f;
+    public float boostBurnRate = 250f;
+    public float boostGainRate = 30f;
+    
     void Update()
     {
         if (Input.GetAxisRaw("Fire1") > 0) {PhaseAbility();} // activate phase ability
@@ -34,7 +39,12 @@ public class RoverController : MonoBehaviour
         CheckForGroundMovement();
         CheckForBoost();
         CheckForAirMovement();
-        
+        if (boostAmount < boostMax)
+        {
+            boostAmount += (boostGainRate * Time.deltaTime);
+        }
+        Debug.Log("boostAmount = " + boostAmount);
+
     }
     private void PhaseAbility()
     {
@@ -96,25 +106,29 @@ public class RoverController : MonoBehaviour
     private void CheckForBoost()
     {
         // do boost when space key pressed
-        if (Input.GetKey(KeyCode.Space)) 
+        if (Input.GetKey(KeyCode.Space) && boostAmount > 0f) 
         {
             rigidBody.AddForce(Vector2.up * vertThrustVal * Time.deltaTime);
-            
+            boostAmount -= (boostBurnRate * Time.deltaTime);
+
         }
 
     }
 
     private void CheckForAirMovement()
     {
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && boostAmount > 0f && !RoverManager.instance.grounded)
         {
             // move right
             rigidBody.AddForce(Vector2.right * horiThrustVal * Time.deltaTime);
+            boostAmount -= (boostBurnRate * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A) && boostAmount > 0f && !RoverManager.instance.grounded)
         {
             // move left
             rigidBody.AddForce(Vector2.left * horiThrustVal * Time.deltaTime);
+            boostAmount -= (boostBurnRate * Time.deltaTime);
+
         }
     }
 
