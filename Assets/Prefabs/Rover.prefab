@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 2089746909599595381}
   m_Layer: 0
   m_Name: body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -757,3 +757,7 @@ MonoBehaviour:
   speedBackward: -5
   torqueForward: 10
   torqueBackward: -10
+  boostMax: 100
+  boostAmount: 100
+  boostBurnRate: 250
+  boostGainRate: 30

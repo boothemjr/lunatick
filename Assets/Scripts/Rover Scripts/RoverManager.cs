@@ -50,7 +50,7 @@ public class RoverManager : MonoBehaviour
         midWheelScript = midWheel.GetComponent<WheelScript>();
         rearWheelScript = rearWheel.GetComponent<WheelScript>();
         
-        respawn = GameObject.FindGameObjectWithTag("Respawn"); // store respawn position
+        RefreshRespawn();
         
         //store rigid bodies
         roverRB = roverBody.GetComponent<Rigidbody2D>();
@@ -59,6 +59,8 @@ public class RoverManager : MonoBehaviour
         rearWheelRB = rearWheel.GetComponent<Rigidbody2D>();
 
         grounded = true;
+        
+        Reset();
 
     }
 
@@ -70,6 +72,7 @@ public class RoverManager : MonoBehaviour
 
     public void Reset()
     {
+        
         //set all rigid bodies to zero
         roverRB.velocity = Vector2.zero;
         frontWheelRB.velocity = Vector2.zero;
@@ -79,21 +82,20 @@ public class RoverManager : MonoBehaviour
         rearWheelRB.velocity = Vector2.zero;
         rearWheelRB.angularVelocity = 0f;
         
-        roverBody.transform.position = respawn.transform.position; // move rover to respawn position
-    }
-    
-    /*public bool IsGrounded()
-    {
-        bool grounded = frontWheelScript.isTouchingGround();
+        var newPos = respawn.transform.position;
         
-        if (grounded)
-        {
-            return true;
-        }
+        roverBody.transform.position = newPos; // move rover to respawn position
+        newPos += new Vector3(0f, 0f, 1);
+        frontWheelRB.transform.position = newPos;
+        midWheelRB.transform.position = newPos;
+        rearWheelRB.transform.position = newPos;
 
-        return false;
+    }
 
-    }*/
+    public void RefreshRespawn()
+    {
+        respawn = GameObject.FindGameObjectWithTag("Respawn");
+    }
 
     public void SetGrounded(bool val)
     {

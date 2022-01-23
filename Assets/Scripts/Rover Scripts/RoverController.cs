@@ -1,13 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class RoverController : MonoBehaviour
 {
     
     public Rigidbody2D rigidBody; 
     public float vertThrustVal = 7000f;
-    public float horiThrustVal = 3500f;
+    public float horiThrustVal = 1500f;
 
 
     [SerializeField] PhaseManager phaseManager;
@@ -39,9 +41,9 @@ public class RoverController : MonoBehaviour
         CheckForGroundMovement();
         CheckForBoost();
         CheckForAirMovement();
-        if (boostAmount < boostMax)
+        if (boostAmount < boostMax && RoverManager.instance.grounded)
         {
-            boostAmount += (boostGainRate * Time.deltaTime);
+            boostAmount = boostMax;
         }
 
     }
@@ -116,17 +118,18 @@ public class RoverController : MonoBehaviour
 
     private void CheckForAirMovement()
     {
-        if (Input.GetKey(KeyCode.D) && boostAmount > 0f && !RoverManager.instance.grounded)
+        if (Input.GetKey(KeyCode.D) && /*boostAmount > 0f &&*/ !RoverManager.instance.grounded)
         {
             // move right
             rigidBody.AddForce(Vector2.right * horiThrustVal * Time.deltaTime);
-            boostAmount -= (boostBurnRate * Time.deltaTime);
+            //boostAmount -= (boostBurnRate * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.A) && boostAmount > 0f && !RoverManager.instance.grounded)
+        else if (Input.GetKey(KeyCode.A) && /*boostAmount > 0f &&*/ !RoverManager.instance.grounded)
         {
             // move left
             rigidBody.AddForce(Vector2.left * horiThrustVal * Time.deltaTime);
-            boostAmount -= (boostBurnRate * Time.deltaTime);
+            //boostAmount -= (boostBurnRate * Time.deltaTime);
+
         }
     }
     private void UsePhaseAbility(float rate)
