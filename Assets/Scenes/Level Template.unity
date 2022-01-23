@@ -1134,6 +1134,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
+--- !u!1 &2089746911338374731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1830365813542489677, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
+  m_PrefabInstance: {fileID: 2089746911338374730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2089746911338374732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3606184513943340891, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
+  m_PrefabInstance: {fileID: 2089746911338374730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2089746911338374733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2773166644939155327, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
+  m_PrefabInstance: {fileID: 2089746911338374730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2089746911338374734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089746911338374731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 193452eefa9c2b04cb8746383df5e541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTouchingGround: 0
+--- !u!114 &2089746911338374735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089746911338374732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 193452eefa9c2b04cb8746383df5e541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTouchingGround: 0
+--- !u!114 &2089746911338374736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089746911338374733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 193452eefa9c2b04cb8746383df5e541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTouchingGround: 0
 --- !u!1001 &2369959420741460915
 PrefabInstance:
   m_ObjectHideFlags: 0
