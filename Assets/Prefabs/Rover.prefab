@@ -747,7 +747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 7462208274323047424}
   vertThrustVal: 7000
-  horiThrustVal: 3500
+  horiThrustVal: 1500
   phaseManager: {fileID: 0}
   phaseSpeedUpRate: 8
   wheelFront: {fileID: 3624819920195602388}
@@ -757,7 +757,7 @@ MonoBehaviour:
   speedBackward: -5
   torqueForward: 10
   torqueBackward: -10
-  boostMax: 100
-  boostAmount: 100
+  boostMax: 75
+  boostAmount: 75
   boostBurnRate: 250
   boostGainRate: 30
