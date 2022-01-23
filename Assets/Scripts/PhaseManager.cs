@@ -6,6 +6,7 @@ public class PhaseManager : MonoBehaviour
 {
     // Represents where in the lunar cycle we are in days
     public float cycleDay; 
+    public float cycleSpeed = 1f;
 
     // Lunar cycle is 28 days
     private float cycle = 28;
@@ -26,12 +27,14 @@ public class PhaseManager : MonoBehaviour
         DetermineLightOrDark();
     }
 
+    // cycles through the 28 days of the lunar calendar, cycleSpeed of 1 -> 1 day per second
     private void CycleDays()
     {
-        if(cycleDay < 28) {cycleDay += Time.deltaTime;}
+        if(cycleDay < 28) {cycleDay += Time.deltaTime * cycleSpeed;}
         else{cycleDay = 0;}
     }
 
+    // calculates if face of moon is light or dark depending on its point in the cycle
     private void DetermineLightOrDark()
     {
         if (cycleDay < 7 || cycleDay > 21) {light = false;}

@@ -26,7 +26,7 @@ public class Circle : MonoBehaviour
         lineRenderer.positionCount = vertexCount;
         for (int i = 0; i < lineRenderer.positionCount; i++)
         {
-            Vector3 pos = new Vector3(radius * Mathf.Cos(theta), radius * Mathf.Sin(theta), 0f);
+            Vector3 pos = new Vector3(transform.position.x + radius * Mathf.Cos(theta), transform.position.y + radius * Mathf.Sin(theta), 0f);
             lineRenderer.SetPosition(i, pos);
             theta += deltaTheta;
         }
