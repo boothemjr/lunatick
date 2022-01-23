@@ -761,3 +761,6 @@ MonoBehaviour:
   boostAmount: 75
   boostBurnRate: 250
   boostGainRate: 30
+  spriteRenderer: {fileID: 239681363285068834}
+  lightBody: {fileID: 21300000, guid: e1440347b5dd79a4697db87d39d8e9be, type: 3}
+  darkBody: {fileID: 21300000, guid: 54a6a9dc7e2659347b076f9b9bc97ca7, type: 3}

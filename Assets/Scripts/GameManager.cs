@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     // THIS LINE OF CODE SHOULD BE USED FOR ANYTHING WE WANT TO BE A SINGLETON
     //static variable means the value is the same for all the objects of this class type and the class itself
     public static GameManager instance; //this static var will hold the Singleton
+    public bool isLight;
     
     int currentLevel = 1;
     private const int MAX_LEVEL = 1;
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject); //destroy this new object, so there is only ever one
         }
+
+        isLight = true;
     }
 
     void Update()
@@ -32,6 +35,9 @@ public class GameManager : MonoBehaviour
         {
             RoverManager.instance.Reset(); // use reset method of rovermanager instance
         }
+        
+
+        
     }
 
     public void AdvanceLevel()

@@ -14,6 +14,8 @@ public class PhaseManager : MonoBehaviour
     // Whether we are in a light or dark cycle
     public bool light;
 
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -37,8 +39,16 @@ public class PhaseManager : MonoBehaviour
     // calculates if face of moon is light or dark depending on its point in the cycle
     private void DetermineLightOrDark()
     {
-        if (cycleDay < 7 || cycleDay > 21) {light = false;}
-        else {light = true;} 
+        if (cycleDay < 7 || cycleDay > 21)
+        {
+            light = false;
+            GameManager.instance.isLight = false;
+        }
+        else
+        {
+            light = true;
+            GameManager.instance.isLight = true;
+        } 
     }
 
 }

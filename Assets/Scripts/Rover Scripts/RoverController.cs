@@ -34,6 +34,16 @@ public class RoverController : MonoBehaviour
     public float boostBurnRate = 250f;
     public float boostGainRate = 30f;
     
+    public SpriteRenderer spriteRenderer;
+    public Sprite lightBody;
+    public Sprite darkBody;
+    private bool isDarkBody;
+
+    private void Start()
+    {
+
+    }
+
     void Update()
     {
         if (Input.GetAxisRaw("Fire1") > 0) {UsePhaseAbility(phaseSpeedUpRate * Time.deltaTime);}
@@ -45,6 +55,8 @@ public class RoverController : MonoBehaviour
         {
             boostAmount = boostMax;
         }
+   
+        SetSprite(GameManager.instance.isLight);
 
     }
     private void PhaseAbility()
@@ -136,5 +148,20 @@ public class RoverController : MonoBehaviour
     {
         phaseManager.cycleDay += rate;
     }
+    
+    public void SetSprite(bool status)
+    {
+        if (status)
+        {
+            spriteRenderer.sprite = darkBody;
+        }
+        else
+        {
+            spriteRenderer.sprite = lightBody;
+ 
+        }
+        
+    }
+    
 
 }
