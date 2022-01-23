@@ -11,7 +11,7 @@ public class RoverController : MonoBehaviour
 
 
     [SerializeField] PhaseManager phaseManager;
-    [SerializeField] float phaseSpeedUpRate;
+    [SerializeField] float phaseSpeedUpRate = 1.5f;
 
     public WheelJoint2D wheelFront;
     public WheelJoint2D wheelMid;
@@ -29,7 +29,7 @@ public class RoverController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetAxisRaw("Fire1") > 0) {PhaseAbility();}
+        if (Input.GetAxisRaw("Fire1") > 0) {UsePhaseAbility(phaseSpeedUpRate * Time.deltaTime);}
 
         
         // move forwards
@@ -99,9 +99,9 @@ public class RoverController : MonoBehaviour
             
         }
     }
-    private void PhaseAbility()
+    private void UsePhaseAbility(float rate)
     {
-        phaseManager.cycleDay += phaseSpeedUpRate;
+        phaseManager.cycleDay += rate;
     }
 
 
