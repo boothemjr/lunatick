@@ -20,7 +20,7 @@ public class RoverController : MonoBehaviour
     public JointMotor2D motorFront;
     public JointMotor2D motorMid;
     public JointMotor2D motorRear;
-
+    
     public float speedForward = 7500;
     public float speedBackward = -5;
     
@@ -29,9 +29,20 @@ public class RoverController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetAxisRaw("Fire1") > 0) {PhaseAbility();}
+        if (Input.GetAxisRaw("Fire1") > 0) {PhaseAbility();} // activate phase ability
 
+        CheckForGroundMovement();
+        CheckForBoost();
+        CheckForAirMovement();
         
+    }
+    private void PhaseAbility()
+    {
+        phaseManager.cycleDay += phaseSpeedUpRate;
+    }
+
+    private void CheckForGroundMovement()
+    {
         // move forwards
         if (Input.GetAxisRaw("Vertical") > 0 && RoverManager.instance.grounded) // press D while grounded
         {
@@ -72,24 +83,6 @@ public class RoverController : MonoBehaviour
 
         }
         
-        // do boost when space key pressed
-        else if (Input.GetKey(KeyCode.Space)) 
-        {
-            rigidBody.AddForce(Vector2.up * vertThrustVal * Time.deltaTime);
-            
-        }
-        
-        else if (Input.GetKey(KeyCode.D))
-        {
-            // move right
-            rigidBody.AddForce(Vector2.right * horiThrustVal * Time.deltaTime);
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            // move left
-            rigidBody.AddForce(Vector2.left * horiThrustVal * Time.deltaTime);
-        }
-        
         // turn off motors if no button pressed
         else
         {
@@ -99,10 +92,30 @@ public class RoverController : MonoBehaviour
             
         }
     }
-    private void PhaseAbility()
+
+    private void CheckForBoost()
     {
-        phaseManager.cycleDay += phaseSpeedUpRate;
+        // do boost when space key pressed
+        if (Input.GetKey(KeyCode.Space)) 
+        {
+            rigidBody.AddForce(Vector2.up * vertThrustVal * Time.deltaTime);
+            
+        }
+
     }
 
+    private void CheckForAirMovement()
+    {
+        if (Input.GetKey(KeyCode.D))
+        {
+            // move right
+            rigidBody.AddForce(Vector2.right * horiThrustVal * Time.deltaTime);
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            // move left
+            rigidBody.AddForce(Vector2.left * horiThrustVal * Time.deltaTime);
+        }
+    }
 
 }
