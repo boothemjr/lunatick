@@ -36,7 +36,7 @@ public class ObjectPhaser : MonoBehaviour
             else if (!phaseManager.light) 
             {
                 myBody.enabled = false;
-                myRenderer.color = new Color(168f/255f,162f/255f,77f/255f,200/255f);
+                myRenderer.color = new Color(168f/255f,162f/255f,77f/255f,140/255f);
             }
         }
         else if (!isLight)
@@ -49,7 +49,7 @@ public class ObjectPhaser : MonoBehaviour
             else if (phaseManager.light) 
             {
                 myBody.enabled = false;
-                myRenderer.color = new Color(58f/255f,28f/255f,72f/255f,200f/255f);
+                myRenderer.color = new Color(58f/255f,28f/255f,72f/255f,140f/255f);
             }
         }
     }
