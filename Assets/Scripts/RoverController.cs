@@ -6,7 +6,9 @@ public class RoverController : MonoBehaviour
 {
     
     public Rigidbody2D rigidBody; 
-    public float thrustVal = 7000f;
+    public float vertThrustVal = 7000f;
+    public float horiThrustVal = 3500f;
+
 
     [SerializeField] PhaseManager phaseManager;
     [SerializeField] float phaseSpeedUpRate;
@@ -29,7 +31,9 @@ public class RoverController : MonoBehaviour
     {
         if (Input.GetAxisRaw("Fire1") > 0) {PhaseAbility();}
 
-        if (Input.GetAxisRaw("Vertical") > 0) // using inputManager for vehicle control - might change later
+        
+        // move forwards
+        if (Input.GetAxisRaw("Vertical") > 0 && RoverManager.instance.grounded) // press D while grounded
         {
             // front tire control
             motorFront.motorSpeed = speedForward * -1;
@@ -49,7 +53,7 @@ public class RoverController : MonoBehaviour
         }
         
         // move backwards
-        else if (Input.GetAxisRaw("Vertical") < 0) 
+        else if (Input.GetAxisRaw("Vertical") < 0 && RoverManager.instance.grounded) // press A while grounded
         {
             // front tire control
             motorFront.motorSpeed = speedBackward * -1;
@@ -71,7 +75,19 @@ public class RoverController : MonoBehaviour
         // do boost when space key pressed
         else if (Input.GetKey(KeyCode.Space)) 
         {
-            rigidBody.AddForce(Vector2.up * thrustVal * Time.deltaTime);
+            rigidBody.AddForce(Vector2.up * vertThrustVal * Time.deltaTime);
+            
+        }
+        
+        else if (Input.GetKey(KeyCode.D))
+        {
+            // move right
+            rigidBody.AddForce(Vector2.right * horiThrustVal * Time.deltaTime);
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            // move left
+            rigidBody.AddForce(Vector2.left * horiThrustVal * Time.deltaTime);
         }
         
         // turn off motors if no button pressed
@@ -87,4 +103,6 @@ public class RoverController : MonoBehaviour
     {
         phaseManager.cycleDay += phaseSpeedUpRate;
     }
+
+
 }

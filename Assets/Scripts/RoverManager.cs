@@ -19,8 +19,13 @@ public class RoverManager : MonoBehaviour
     private Rigidbody2D frontWheelRB;
     private Rigidbody2D midWheelRB;
     private Rigidbody2D rearWheelRB;
-    
 
+    private Component frontWheelScript;
+    private Component midWheelScript;
+    private Component rearWheelScript;
+
+    public bool grounded;
+    
     void Start()
     {
         // THIS CODE SHOULD BE USED FOR ANYTHING WE WANT TO BE A SINGLETON
@@ -41,6 +46,10 @@ public class RoverManager : MonoBehaviour
         midWheel = roverObject.transform.GetChild(2).gameObject; // store mid wheel
         rearWheel = roverObject.transform.GetChild(3).gameObject; // store rear wheel
 
+        frontWheelScript = frontWheel.GetComponent<WheelScript>();
+        midWheelScript = midWheel.GetComponent<WheelScript>();
+        rearWheelScript = rearWheel.GetComponent<WheelScript>();
+        
         respawn = GameObject.FindGameObjectWithTag("Respawn"); // store respawn position
         
         //store rigid bodies
@@ -48,6 +57,8 @@ public class RoverManager : MonoBehaviour
         frontWheelRB = frontWheel.GetComponent<Rigidbody2D>();
         midWheelRB = midWheel.GetComponent<Rigidbody2D>();
         rearWheelRB = rearWheel.GetComponent<Rigidbody2D>();
+
+        grounded = true;
 
     }
 
@@ -69,5 +80,23 @@ public class RoverManager : MonoBehaviour
         rearWheelRB.angularVelocity = 0f;
         
         roverBody.transform.position = respawn.transform.position; // move rover to respawn position
+    }
+    
+    /*public bool IsGrounded()
+    {
+        bool grounded = frontWheelScript.isTouchingGround();
+        
+        if (grounded)
+        {
+            return true;
+        }
+
+        return false;
+
+    }*/
+
+    public void SetGrounded(bool val)
+    {
+        grounded = val;
     }
 }
