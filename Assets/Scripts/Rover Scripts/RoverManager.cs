@@ -10,6 +10,7 @@ public class RoverManager : MonoBehaviour
     public static RoverManager instance; //this static var will hold the Singleton
     private GameObject roverObject;
     private GameObject roverBody;
+    private RoverController roverController;
     private GameObject respawn;
     private GameObject frontWheel;
     private GameObject midWheel;
@@ -26,8 +27,11 @@ public class RoverManager : MonoBehaviour
 
     public bool grounded;
     
+    
+    
     void Start()
     {
+        
         // THIS CODE SHOULD BE USED FOR ANYTHING WE WANT TO BE A SINGLETON
         if (instance == null) //instance hasn't been set yet
         {
@@ -39,8 +43,10 @@ public class RoverManager : MonoBehaviour
             Destroy(gameObject); //destroy this new object, so there is only ever one
         }
 
+
         roverObject = GameObject.Find("Rover"); // set rover object
-        
+        roverController = roverObject.GetComponent<RoverController>();
+
         roverBody = roverObject.transform.GetChild(0).gameObject; // store rover body
         frontWheel = roverObject.transform.GetChild(1).gameObject; // store front wheel
         midWheel = roverObject.transform.GetChild(2).gameObject; // store mid wheel
@@ -61,12 +67,14 @@ public class RoverManager : MonoBehaviour
         grounded = true;
         
         Reset();
+        
+        
 
     }
 
     private void Update()
     {
-        
+
     }
 
 
@@ -101,4 +109,6 @@ public class RoverManager : MonoBehaviour
     {
         grounded = val;
     }
+
+
 }
