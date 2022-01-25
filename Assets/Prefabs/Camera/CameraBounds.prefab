@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6474869703914689528}
   - component: {fileID: 6474869703914689531}
   - component: {fileID: 6474869703914689530}
+  - component: {fileID: 7695280787203084525}
   m_Layer: 10
   m_Name: CameraBounds
   m_TagString: Untagged
@@ -74,20 +75,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 6474869703914689530}
     m_ColliderPaths:
-    - - X: 855536539
-        Y: -52925204
-      - X: 855536539
-        Y: 194505552
-      - X: -100901184
-        Y: 194505259
-      - X: -100900891
-        Y: -52925204
+    - - X: 2775581659
+        Y: -163940768
+      - X: 2775581659
+        Y: 602499136
+      - X: -327349472
+        Y: 602498843
+      - X: -327349179
+        Y: -163940768
   m_CompositePaths:
     m_Paths:
-    - - {x: 85.55363, y: -5.2925205}
-      - {x: 85.55363, y: 19.450556}
-      - {x: -10.090118, y: 19.450497}
-      - {x: -10.09006, y: -5.2925205}
+    - - {x: 277.55814, y: -16.394077}
+      - {x: 277.55814, y: 60.249916}
+      - {x: -32.734947, y: 60.249855}
+      - {x: -32.73489, y: -16.394077}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!61 &6474869703914689530
@@ -116,3 +117,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 95.6438, y: 24.743076}
   m_EdgeRadius: 0
+--- !u!114 &7695280787203084525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6474869703914689541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b13a7d75c548cf4fa0fb0a7ca9a97a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

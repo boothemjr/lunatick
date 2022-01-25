@@ -1,12 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MoonHandler : MonoBehaviour
 {
-    public PhaseManager phaseManager;
+    public GameObject phaseManager;
 
-    public string sortingLayer;
+    //public string sortingLayer;
 
     public Circle circle;
 
@@ -17,9 +18,14 @@ public class MoonHandler : MonoBehaviour
 
     public float theta = 0f;
 
+    private void Start()
+    {
+        Reset();
+    }
+
     private void Update()
     {
-        theta = phaseManager.cycleDay / 28 * 2 * Mathf.PI;
+        theta = phaseManager.GetComponent<PhaseManager>().cycleDay / 28 * 2 * Mathf.PI;
         PlaceAlongOrbit(theta);
     }
 
@@ -50,5 +56,9 @@ public class MoonHandler : MonoBehaviour
 
     //     return pos;
     // }
-    
+
+    public void Reset()
+    {
+        phaseManager = GameObject.Find("Phase Manager");
+    }
 }
