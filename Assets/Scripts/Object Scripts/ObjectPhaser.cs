@@ -21,6 +21,7 @@ public class ObjectPhaser : MonoBehaviour
     {
         myBody = GetComponent<BoxCollider2D>() as BoxCollider2D; 
         myRenderer = GetComponent<SpriteRenderer>(); 
+        phaseManager = GameObject.FindWithTag("Phase Manager").GetComponent<PhaseManager>();
     }
 
     // Update is called once per frame

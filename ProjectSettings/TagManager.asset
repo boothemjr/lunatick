@@ -8,6 +8,7 @@ TagManager:
   - Killzone
   - Dark Killzone
   - Light Killzone
+  - Phase Manager
   layers:
   - Default
   - TransparentFX

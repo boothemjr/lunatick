@@ -12,7 +12,10 @@ public class KillzoneCollisionHandler : MonoBehaviour
     // 0 -> no contact. 1 -> in contact with Dark Killzone. 2 -> in contact with Light Killzone
     private bool inContactWithPlayer = false;
     
-
+    private void Start() 
+    {
+            phaseManager = GameObject.FindWithTag("Phase Manager").GetComponent<PhaseManager>();
+    }
 
     private void Update() 
     {
