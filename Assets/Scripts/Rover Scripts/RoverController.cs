@@ -11,6 +11,8 @@ public class RoverController : MonoBehaviour
     public float vertThrustVal = 7000f;
     public float horiThrustVal = 1500f;
 
+    public AudioSource audioSource;
+    public AudioClip moveSound;
 
     [SerializeField] PhaseManager phaseManager;
     [SerializeField] float phaseSpeedUpRate = 1.5f;
@@ -41,7 +43,7 @@ public class RoverController : MonoBehaviour
 
     private void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -83,6 +85,12 @@ public class RoverController : MonoBehaviour
             motorRear.motorSpeed = speedForward * -1;
             motorRear.maxMotorTorque = torqueForward;
             wheelRear.motor = motorRear;
+            
+            // play audio
+            if (!audioSource.isPlaying) // avoid sound layer
+            {
+                audioSource.PlayOneShot(moveSound);
+            }
 
         }
         
@@ -103,6 +111,12 @@ public class RoverController : MonoBehaviour
             motorRear.motorSpeed = speedBackward * -1;
             motorRear.maxMotorTorque = torqueBackward;
             wheelRear.motor = motorRear;
+            
+            // play audio
+            if (!audioSource.isPlaying) // avoid sound layer
+            {
+                audioSource.PlayOneShot(moveSound);
+            }
 
         }
         
