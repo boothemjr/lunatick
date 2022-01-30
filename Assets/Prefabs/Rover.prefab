@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8367383873280197604}
   - component: {fileID: 4165118939108698126}
   - component: {fileID: 7033274897512364914}
-  - component: {fileID: 317083468464072712}
   - component: {fileID: 2089746911338374734}
   m_Layer: 0
   m_Name: back wheel
@@ -123,19 +122,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &317083468464072712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830365813542489677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 193452eefa9c2b04cb8746383df5e541, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTouchingGround: 0
 --- !u!114 &2089746911338374734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +195,6 @@ GameObject:
   - component: {fileID: 1434101312593907735}
   - component: {fileID: 4224213669018280731}
   - component: {fileID: 3526886923105248717}
-  - component: {fileID: 4286303009455227190}
   - component: {fileID: 2089746911338374736}
   m_Layer: 0
   m_Name: front wheel
@@ -320,19 +305,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4286303009455227190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2773166644939155327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 193452eefa9c2b04cb8746383df5e541, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTouchingGround: 0
 --- !u!114 &2089746911338374736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,7 +330,6 @@ GameObject:
   - component: {fileID: 8676803685764319730}
   - component: {fileID: 1756509153752871205}
   - component: {fileID: 3245563630391604424}
-  - component: {fileID: 3390075874762072338}
   - component: {fileID: 2089746911338374735}
   m_Layer: 0
   m_Name: mid wheel
@@ -469,19 +440,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3390075874762072338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3606184513943340891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 193452eefa9c2b04cb8746383df5e541, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTouchingGround: 0
 --- !u!114 &2089746911338374735
 MonoBehaviour:
   m_ObjectHideFlags: 0
