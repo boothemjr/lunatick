@@ -21,7 +21,7 @@ public class RoverCollisionHandler : MonoBehaviour
         else if (inContactWithZone == 2 && !phaseManager.light) {DestroyPlayer();}
 
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("contact");
         // sets status of zone contact
@@ -39,7 +39,7 @@ public class RoverCollisionHandler : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         // resets status of zone contact. note that this does not support overlapping zones
         if (other.gameObject.tag == "Killzone") {DestroyPlayer();}
@@ -49,13 +49,11 @@ public class RoverCollisionHandler : MonoBehaviour
 
     void DestroyPlayer()
     {
-        GetComponent<RoverController>().enabled = false;
         Invoke("ReloadLevel", 2f);
     }
 
     void ReloadLevel()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex);
+        RoverManager.instance.Reset();
     }
 }

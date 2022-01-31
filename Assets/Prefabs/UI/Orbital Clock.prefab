@@ -179,6 +179,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -88.71
       objectReference: {fileID: 0}
+    - target: {fileID: 9082577021534022781, guid: 862b6583df260a540a139a1e32c38a38, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082577021534022781, guid: 862b6583df260a540a139a1e32c38a38, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082577021534022781, guid: 862b6583df260a540a139a1e32c38a38, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1401941833
+      objectReference: {fileID: 0}
     - target: {fileID: 9082577021534022783, guid: 862b6583df260a540a139a1e32c38a38, type: 3}
       propertyPath: m_Name
       value: Earth Shadow
@@ -201,6 +213,18 @@ PrefabInstance:
       propertyPath: circle
       value: 
       objectReference: {fileID: 1767572833450881025}
+    - target: {fileID: 8283532483402002698, guid: 9f9b4888a851b7040a5dc769ccab5619, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283532483402002698, guid: 9f9b4888a851b7040a5dc769ccab5619, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283532483402002698, guid: 9f9b4888a851b7040a5dc769ccab5619, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1401941833
+      objectReference: {fileID: 0}
     - target: {fileID: 8283532483748821146, guid: 9f9b4888a851b7040a5dc769ccab5619, type: 3}
       propertyPath: m_Name
       value: Moon
@@ -248,6 +272,18 @@ PrefabInstance:
     - target: {fileID: 8283532483748821157, guid: 9f9b4888a851b7040a5dc769ccab5619, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312169525806947867, guid: 9f9b4888a851b7040a5dc769ccab5619, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312169525806947867, guid: 9f9b4888a851b7040a5dc769ccab5619, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312169525806947867, guid: 9f9b4888a851b7040a5dc769ccab5619, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1401941833
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f9b4888a851b7040a5dc769ccab5619, type: 3}
@@ -335,6 +371,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4280216145872578, guid: 1885272d02befb3429e46bfb5a828167, type: 3}
   m_PrefabInstance: {fileID: 5267761896815049260}
   m_PrefabAsset: {fileID: 0}
+--- !u!210 &8508123162365045697
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5268996311559337704}
+  m_Enabled: 1
+  m_SortingLayerID: -1401941833
+  m_SortingLayer: 2
+  m_SortingOrder: 0
 --- !u!114 &5267761896815049299
 MonoBehaviour:
   m_ObjectHideFlags: 0

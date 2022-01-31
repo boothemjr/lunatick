@@ -684,6 +684,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2369959420308691916, guid: 132dde12046949e41857a08a8178e4fd, type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2369959420308691916, guid: 132dde12046949e41857a08a8178e4fd, type: 3}
       propertyPath: orthographic size
       value: 8.14
       objectReference: {fileID: 0}
@@ -2161,11 +2165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852739366754296473, guid: 1a1752b58ba4fe843bdecdd418c072f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.21
+      value: 86.8
       objectReference: {fileID: 0}
     - target: {fileID: 4852739366754296473, guid: 1a1752b58ba4fe843bdecdd418c072f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.91
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 4852739366754296473, guid: 1a1752b58ba4fe843bdecdd418c072f5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3589,6 +3593,10 @@ PrefabInstance:
       objectReference: {fileID: 1594061976}
     - target: {fileID: 2331047734097053321, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
       propertyPath: m_Name
+      value: Rover
+      objectReference: {fileID: 0}
+    - target: {fileID: 2331047734097053321, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
+      propertyPath: m_TagString
       value: Rover
       objectReference: {fileID: 0}
     - target: {fileID: 3163344679988328663, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}

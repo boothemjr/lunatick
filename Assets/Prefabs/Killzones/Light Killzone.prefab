@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3554238258420887780}
   m_Layer: 0
   m_Name: Light Killzone
-  m_TagString: Dark Killzone
+  m_TagString: Light Killzone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,9 +70,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 386880099
+  m_SortingLayer: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.6603774, g: 0.63491577, b: 0.30215383, a: 0.42352942}
   m_FlipX: 0
@@ -125,3 +125,4 @@ MonoBehaviour:
   phaseManager: {fileID: 0}
   isLight: 1
   isPureKillZone: 0
+  rover: {fileID: 0}

@@ -10,7 +10,7 @@ public class RoverManager : MonoBehaviour
     public static RoverManager instance; //this static var will hold the Singleton
     private GameObject roverObject;
     private GameObject roverBody;
-    private RoverController roverController;
+    public RoverController roverController;
     private GameObject respawn;
     private GameObject frontWheel;
     private GameObject midWheel;
@@ -27,6 +27,9 @@ public class RoverManager : MonoBehaviour
 
     public bool grounded;
     
+    // fields managing death effects
+    [SerializeField] float loadDelay = 1f;
+    [SerializeField] ParticleSystem explosion;
     
     
     void Start()
@@ -45,7 +48,8 @@ public class RoverManager : MonoBehaviour
 
 
         roverObject = GameObject.Find("Rover"); // set rover object
-        roverController = roverObject.GetComponent<RoverController>();
+        // this doesn't work since roverController is not a part of the object
+        //roverController = roverObject.GetComponent<RoverController>();
 
         roverBody = roverObject.transform.GetChild(0).gameObject; // store rover body
         frontWheel = roverObject.transform.GetChild(1).gameObject; // store front wheel
@@ -110,5 +114,19 @@ public class RoverManager : MonoBehaviour
         grounded = val;
     }
 
+    //public method to kill the rover
+    public void StartCrashSequence()
+    {
+        roverController.enabled = false;
+        explosion.time = 0;
+        explosion.Play();
+        Invoke("Reset", loadDelay);
+        Invoke("EnableRoverController", loadDelay + 0.1f);
+    }
+
+    public void EnableRoverController()
+    {
+        roverController.enabled = true;
+    }
 
 }

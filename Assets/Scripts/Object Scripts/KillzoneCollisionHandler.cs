@@ -8,6 +8,7 @@ public class KillzoneCollisionHandler : MonoBehaviour
     [SerializeField] PhaseManager phaseManager;
     [SerializeField] bool isLight = true;
     [SerializeField] bool isPureKillZone;
+    public RoverManager rover;
     // represents status of contact with killzones. 
     // 0 -> no contact. 1 -> in contact with Dark Killzone. 2 -> in contact with Light Killzone
     private bool inContactWithPlayer = false;
@@ -15,6 +16,7 @@ public class KillzoneCollisionHandler : MonoBehaviour
     private void Start() 
     {
             phaseManager = GameObject.FindWithTag("Phase Manager").GetComponent<PhaseManager>();
+            rover = GameObject.FindWithTag("Rover").GetComponent<RoverManager>();
     }
 
     private void Update() 
@@ -35,7 +37,7 @@ public class KillzoneCollisionHandler : MonoBehaviour
 
     void DestroyPlayer()
     {
-        Invoke("ReloadLevel", 2f);
+        rover.StartCrashSequence();
     }
 
     void ReloadLevel()
