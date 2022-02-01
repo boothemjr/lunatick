@@ -167,7 +167,6 @@ Transform:
   - {fileID: 2672689864821512214}
   - {fileID: 5820645895219632191}
   - {fileID: 6329525508039141740}
-  - {fileID: 708749814853880783}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -186,7 +185,7 @@ MonoBehaviour:
   roverController: {fileID: 2089746909599595381}
   grounded: 0
   loadDelay: 1
-  explosion: {fileID: 3454491985849554531}
+  explosion: {fileID: 6293417210436087078, guid: ce0bb44a57e20844a9f88ab471e4808b, type: 3}
 --- !u!1 &2773166644939155327
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +752,7 @@ MonoBehaviour:
   rigidBody: {fileID: 7462208274323047424}
   vertThrustVal: 7000
   horiThrustVal: 1000
+  audioSource: {fileID: 0}
   moveSound: {fileID: 8300000, guid: c96c0e013d036b74f9efbdaee1b4fe7e, type: 3}
   phaseManager: {fileID: 0}
   phaseSpeedUpRate: 8
