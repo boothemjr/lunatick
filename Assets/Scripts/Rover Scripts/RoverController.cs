@@ -13,6 +13,7 @@ public class RoverController : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip moveSound;
+    public AudioSource music;
 
     [SerializeField] PhaseManager phaseManager;
     [SerializeField] float phaseSpeedUpRate = 1.5f;
@@ -48,7 +49,7 @@ public class RoverController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetAxisRaw("Fire1") > 0) {UsePhaseAbility(phaseSpeedUpRate * Time.deltaTime);}
+        UsePhaseAbility(phaseSpeedUpRate * Time.deltaTime);
 
         CheckForGroundMovement();
         CheckForBoost();
@@ -160,7 +161,16 @@ public class RoverController : MonoBehaviour
     }
     private void UsePhaseAbility(float rate)
     {
-        phaseManager.cycleDay += rate;
+        if (Input.GetAxisRaw("Fire1") > 0) 
+        {
+            music.pitch = 1.5f;
+            phaseManager.cycleDay += rate;
+        }
+        else
+        {
+            music.pitch = 1;
+        }
+        
     }
     
     public void SetSprite(bool status)

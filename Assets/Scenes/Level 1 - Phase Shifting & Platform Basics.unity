@@ -4444,6 +4444,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2089746909599595381, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 1950580394}
+    - target: {fileID: 2089746909599595381, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
       propertyPath: phaseManager
       value: 
       objectReference: {fileID: 1594061976}
