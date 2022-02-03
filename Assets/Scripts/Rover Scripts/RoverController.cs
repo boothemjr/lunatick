@@ -59,7 +59,7 @@ public class RoverController : MonoBehaviour
             boostAmount = boostMax;
         }
    
-        SetSprite(GameManager.instance.isLight);
+        SetSprite(!GameManager.instance.isLight);
 
     }
     private void PhaseAbility()
