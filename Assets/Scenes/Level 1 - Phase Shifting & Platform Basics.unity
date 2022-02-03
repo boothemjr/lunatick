@@ -5124,7 +5124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2369959420308691763, guid: 132dde12046949e41857a08a8178e4fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.505
+      value: 27.505001
       objectReference: {fileID: 0}
     - target: {fileID: 2369959420308691763, guid: 132dde12046949e41857a08a8178e4fd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5162,33 +5162,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2369959420308691916, guid: 132dde12046949e41857a08a8178e4fd, type: 3}
-      propertyPath: m_ClearFlags
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2369959420308691916, guid: 132dde12046949e41857a08a8178e4fd, type: 3}
-      propertyPath: far clip plane
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2369959420308691916, guid: 132dde12046949e41857a08a8178e4fd, type: 3}
-      propertyPath: orthographic size
-      value: 8.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 2369959420308691916, guid: 132dde12046949e41857a08a8178e4fd, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 33
-      objectReference: {fileID: 0}
     - target: {fileID: 2369959420308691919, guid: 132dde12046949e41857a08a8178e4fd, type: 3}
       propertyPath: m_Name
       value: Main Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 2369959420308691919, guid: 132dde12046949e41857a08a8178e4fd, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6407091960914319723, guid: 132dde12046949e41857a08a8178e4fd, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 132dde12046949e41857a08a8178e4fd, type: 3}
@@ -5411,26 +5387,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 654699732}
     m_Modifications:
-    - target: {fileID: 3906433924487678447, guid: 34250df59aae91f468da1ebcec975eef, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5848299220538594230, guid: 34250df59aae91f468da1ebcec975eef, type: 3}
-      propertyPath: m_ScreenY
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5848299220538594230, guid: 34250df59aae91f468da1ebcec975eef, type: 3}
-      propertyPath: m_DeadZoneHeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5848299220538594230, guid: 34250df59aae91f468da1ebcec975eef, type: 3}
-      propertyPath: m_SoftZoneHeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5848299220538594230, guid: 34250df59aae91f468da1ebcec975eef, type: 3}
-      propertyPath: m_TrackedObjectOffset.x
-      value: 5.59
-      objectReference: {fileID: 0}
     - target: {fileID: 5848299221293238024, guid: 34250df59aae91f468da1ebcec975eef, type: 3}
       propertyPath: m_Name
       value: CineCam
@@ -5487,12 +5443,7 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 5466402961567504390}
-    - target: {fileID: 5848299221293238031, guid: 34250df59aae91f468da1ebcec975eef, type: 3}
-      propertyPath: m_Lens.OrthographicSize
-      value: 8.14
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3906433924487678447, guid: 34250df59aae91f468da1ebcec975eef, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34250df59aae91f468da1ebcec975eef, type: 3}
 --- !u!1001 &6109150348374834832
 PrefabInstance:
