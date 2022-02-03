@@ -4451,6 +4451,14 @@ PrefabInstance:
       propertyPath: phaseManager
       value: 
       objectReference: {fileID: 1594061976}
+    - target: {fileID: 2089746909599595381, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
+      propertyPath: torqueForward
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2089746909599595381, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
+      propertyPath: torqueBackward
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 2331047734097053321, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
       propertyPath: m_Name
       value: Rover
@@ -4498,6 +4506,18 @@ PrefabInstance:
     - target: {fileID: 3163344679988328663, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3245563630391604424, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
+      propertyPath: m_AngularDrag
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526886923105248717, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
+      propertyPath: m_AngularDrag
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033274897512364914, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
+      propertyPath: m_AngularDrag
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
