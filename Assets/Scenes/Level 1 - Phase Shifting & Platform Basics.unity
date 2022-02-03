@@ -4979,6 +4979,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1434101312593907735, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434101312593907735, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
+      propertyPath: m_SortingOrder
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1434101312593907735, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 386880099
+      objectReference: {fileID: 0}
     - target: {fileID: 2089746909599595381, guid: 56817b7c05a277244a13c73a85899ba2, type: 3}
       propertyPath: music
       value: 
